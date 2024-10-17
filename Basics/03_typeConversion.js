@@ -5,6 +5,12 @@ let num =23;
 // console.log( num);
 
 let strNum = String(num);
+let numwe = CharacterData(num);
+
+// number to characters  
+var chr = String.fromCharCode(97 + n); // where n is 0, 1, 2 ...
+
+
 // console.log(typeof strNum);
 // console.log( strNum);
 
