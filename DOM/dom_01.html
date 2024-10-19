@@ -1,0 +1,74 @@
+<!-- Method	                        Description
+
+getElementById()	            Selects an element by its ID.
+
+querySelector()	                Selects the first matching element.
+
+createElement()	                Creates a new HTML element.
+
+appendChild()	                Adds an element as the child of another.
+
+textContent	                    Gets or sets the text inside an element.
+
+style	                        Modifies CSS styles of an element.
+
+value	                        Gets or sets the value of form elements.
+
+setAttribute()	                Adds or updates an attribute.
+
+addEventListener()	            Attaches an event listener to an element. -->
+
+
+<!-- Method	                 	            HTML Example (Structure)                                                    JavaScript Example (Usage)
+
+getElementById()	     	            <p id="myParagraph">Hello!</p><button id="changeText">Change</button>	    js const para = document.getElementById('myParagraph'); para.textContent = 'Changed!';
+
+querySelector()	         	            <div class="content">A</div><div class="content">B</div>	                js const first = document.querySelector('.content'); first.style.color = 'red';
+
+createElement()	                        <div id="container"></div>	                                                js const newPara = document.createElement('p'); newPara.textContent = 'New!'; document.getElementById('container').appendChild(newPara);
+
+appendChild()	        	            <ul id="list"></ul>	                                                        js const li = document.createElement('li'); li.textContent = 'Item'; document.getElementById('list').appendChild(li);
+
+textContent	             	            <p id="text">Old Text</p><button id="change">Change</button>	            js document.getElementById('change').addEventListener('click', () => { document.getElementById('text').textContent = 'New Text'; });
+
+style	                                <p id="styled">Style me!</p>	                                            js const p = document.getElementById('styled'); p.style.color = 'blue'; p.style.fontSize = '20px';
+
+value	                              <input type="text" id="name" value="John"><button id="change">Change</button>	js document.getElementById('change').addEventListener('click', () => { document.getElementById('name').value = 'Jane'; });
+
+setAttribute()	 	                    <a id="link">Go!</a>	                                                    js const link = document.getElementById('link'); link.setAttribute('href', 'https://google.com');
+
+addEventListener()	                    <button id="btn">Click</button>	                                            js document.getElementById('btn').addEventListener('click', () => { alert('Clicked!'); }); -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
