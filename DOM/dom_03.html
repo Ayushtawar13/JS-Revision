@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating an element </title>
+</head>
+<body>
+    <p>appending an div here</p>
+    <p>i am para1</p>
+    <p>i am para2</p>
+    <p>i am para3</p>
+    <p>i am para5</p>
+    <p>i am para6</p>
+    <p>i am para7</p>
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main";
+    div.id="id1"
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor="green";
+    div.style.padding="12px"
+    // div.innerHTML="i am element"
+    const addtext = document.createTextNode("my name is ayush");
+    div.appendChild(addtext)
+    document.body.appendChild(div);
+
+    const p1 = document.createElement('p')
+    p1.style.backgroundColor="red"
+    const text = document.createTextNode("before begin")
+
+    p1.appendChild(text);
+
+    document.body.insertAdjacentElement("beforebegin" , p1);
+
+    const p2 = document.createElement('p')
+    p2.style.backgroundColor="red"
+    const text1 = document.createTextNode("after begin , vala hoon me ")
+
+    p2.appendChild(text1);
+
+    // document.body.insertAdjacentElement("afterbegin" , p2);
+    
+    // document.body.insertAdjacentElement("beforeend" , p2);
+
+    document.body.insertAdjacentElement("afterend" , p2);
+
+</script>
+</html>

@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(language){
+        const newElement = document.createElement('li');
+        // newElement.textContent=`${language}`; // optimized tarika hai 
+
+        newElement.innerText=`${language}` // puri tree traverse krni padti hai 
+
+        // document.querySelector('.language').appendChild(newElement)
+
+        const ans = document.querySelector('.language');
+        ans.appendChild(newElement);
+    }
+    addLang("python");
+    addLang("java");
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    secondLang.textContent="mojo"
+    secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+</script>
+</html>
