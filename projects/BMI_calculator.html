@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+
+    <style>
+        *{
+            overflow-y:hidden ;
+        }
+        body
+        {
+            background-color: rgba(33, 31, 31, 0.858);
+            color: aliceblue;
+        }
+        H1{
+            text-align: center;
+            margin-top:50px;
+        }
+        FORM{
+            /* width: 100vw; */
+            /* height: 100vh; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+       label{
+             font: 1rem san-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>B_M_I CALCULATOR</h1>
+    <form action="">
+        <p><label >Height in CM :- </label> <input type="text" id="height"></p>
+        <p><label >weight in KG :- </label> <input type="text" id="weight"></p>
+        <button >Calculate</button>
+
+        <div id="result"></div>
+
+        <div class="weight guide ">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </form>
+
+</body>
+
+<script>
+    const form=document.querySelector("form");
+
+    form.addEventListener('submit', function(e){e.preventDefault();
+
+    // console.log(result);
+     
+    const height= parseInt(document.querySelector("#height").value);
+    const weight= parseInt(document.querySelector("#weight").value);
+    const result=document.querySelector("#result");
+
+    console.log(result);
+
+    if( height == '' || height < 0 || isNaN(height))
+    {
+        console.log(result);
+        result.innerHTML="Please Enter Correct Height";
+    }
+    else if(weight === "" || weight < 0 || isNaN(weight))
+    {
+        result.innerHTML="Please Enter Correct Weight";
+        console.log("1");
+    }
+    else{
+        let bmi =(weight / ((height*height)/10000)).toFixed(2);
+        result.innerHTML=`${bmi}`;
+        console.log("2");
+    }
+    // submit.addEventListener('click', () )
+    console.log("3");
+    });
+</script>
+
+</html>

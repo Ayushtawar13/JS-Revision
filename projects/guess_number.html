@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(124, 112, 112);
+        }
+        .container{
+            width: 400px;
+            height: 300px;
+            background-color: antiquewhite;
+            display:flex;
+            flex-direction: column;
+            justify-content:center ;
+            align-items: center;
+        }
+        body , .formbox{
+            overflow-y: hidden;
+            height:100vh;
+            display:flex;
+            flex-direction: column;
+            justify-content:center ;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="formbox">
+            <form action="">
+                <p>Guess a Number </p>
+                <input id="textfield" type="text"><br><br>
+                <input type="submit" value="Submit Guess" id="submit">
+            </form>
+        </div>
+        <div id="params">
+            <p id="previous-Guess">Previous Guesses :-  <span class="guesses"></span></p>
+            <p  >Remaining Guesses :- <span id="remaining-Guess" >5</span></p>
+            <p id="loworhi"></p>
+        </div>
+    </div>
+    <script>
+        let randomNumber = parseInt((Math.random()*100) +1);
+        console.log(randomNumber);
+        const userGuess = document.querySelector('#textfield');
+        let previousGuess = document.querySelector('.guesses');
+        let remainingGuess = document.querySelector('#remaining-Guess')
+        const submit = document.querySelector('#submit'); 
+        const lowOrHi = document.querySelector('#loworhi');
+        const p = document.createElement('p');
+        const param = document.querySelector('#params')
+        let preguess = [];
+        
+        let numGuess = 1;
+
+        let playGame = true;
+
+        if(playGame){
+            submit.addEventListener('click' , function(e){
+                e.preventDefault();
+                const guess =  parseInt(userGuess.value);
+                validate(guess)
+            })
+        }
+        function validate(guess){
+            // validate 
+            if(isNaN(guess)){
+                alert('please enter a number ');
+            } else if (guess<1){
+                alert('please enter a number greater than 0 ');
+            }else if (guess >100){
+                alert('please enter a number less than 100 ');
+            }else{
+                preguess.push(guess);
+                if(numGuess >=5){
+                    displayGuess(guess);
+                    displayMessage(`Game Over. Random Number was ${randomNumber}`);
+                    endGame();
+                }else{
+                    displayGuess(guess);
+                    checkGuess(guess);
+                }
+            }
+        }
+
+        function checkGuess(guess){
+            if(guess === randomNumber){
+                displayMessage(`Yeahhh ,You Got it ${randomNumber}`);
+                endGame();
+            }else if(guess > randomNumber){
+                displayMessage(" toooo high ");
+            }else if(guess < randomNumber){
+                displayMessage("tooo low");
+            }
+        }
+
+        function displayGuess(guess){
+            userGuess.value = '';
+            previousGuess.innerHTML += `${guess}, `;
+            remainingGuess.innerHTML =`${ 5 - numGuess}`;
+            numGuess++;
+
+        }
+
+        function displayMessage(message){
+            lowOrHi.textContent = `${message}`
+        }
+
+        function endGame(){
+            userGuess.value = '';
+            submit.setAttribute('disabled' ,'');
+            p.classList.add('button');
+            p.innerHTML = '<h2 id="newGame">Start New Game</h2>';
+            param.appendChild(p);
+            playGame = false;
+            newGame();
+        }
+
+        function newGame(){
+            const newGameButton = document.querySelector('#newGame');
+            newGameButton.addEventListener("click" , function(e){
+                randomNumber = parseInt((Math.random()*100) +1);
+                preguess=[];
+                numGuess=0;
+                previousGuess.innerHTML =''
+                remainingGuess.innerHTML =`${5}`;
+                submit.removeAttribute('disabled');
+                // param.removeChild(p);
+                lowOrHi.textContent=''
+                playGame = true;
+                 
+            });
+        }
+         
+    </script>
+</body>
+</html>
