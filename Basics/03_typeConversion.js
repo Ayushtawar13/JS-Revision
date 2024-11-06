@@ -5,11 +5,12 @@ let num =23;
 // console.log( num);
 
 let strNum = String(num);
-let numwe = CharacterData(num);
+// let numwe = CharacterData(num);
 
 // number to characters  
-var chr = String.fromCharCode(97 + n); // where n is 0, 1, 2 ...
 
+var chr = String.fromCharCode(97 + num); // where n is 0, 1, 2 ...
+// console.log(chr)
 
 // console.log(typeof strNum);
 // console.log( strNum);
@@ -27,8 +28,8 @@ let num1= Number(name1);
 // boolean to number and boolean to string 
 
 let bool = true ;
-let x = Number(bool);
-let s = String(bool);
+// let x = Number(bool);
+// let s = String(bool);
 // console.log(typeof s);
 // console.log( s);
 // console.log(typeof bool);
@@ -39,12 +40,12 @@ let s = String(bool);
 // number to boolean 
  
 let isLoggedIn = 1;
-// console.log(typeof isLoggedIn);
-// console.log( isLoggedIn);
+console.log(typeof isLoggedIn);
+console.log( isLoggedIn);
 
 let boolIsLoggedin = Boolean(isLoggedIn);
-// console.log(typeof boolIsLoggedin);
-// console.log( boolIsLoggedin);   // vlaue is true 
+console.log(typeof boolIsLoggedin);
+console.log( boolIsLoggedin);   // vlaue is true 
 
 // empty String to bool 
 
@@ -59,17 +60,31 @@ let bool1= Boolean(str2);
 // exponent 
 
 let exp = 2**2**2;
-console.log(exp);
+// console.log(exp);
 
 // string pehle aati hai toh addition nhi hoga concatination hoga
-console.log("1"+2+2); 
+// console.log("1"+2+2); 
 
 // pehle numbers ka addition hoga uske bad concatination hoga string ka 
-console.log(1+2+"2"+"2"+3);
+// console.log(1+2+"2"+"2"+3);
 
-console.log(+true); // ye chalega  but  
+// console.log(+true); // ye chalega  but  
 
-let n , n1 , n2 ;
-n = n1 = n2 =  2+2;
+// let n , n1 , n2 ;
+// n = n1 = n2 =  2+2;
 
-console.log(n);
+// console.log(n);
+
+// console.log("1"-1);    //  0
+
+// console.log("1"+1);    //  11
+
+// console.log(1-"1");    //  0
+
+// console.log("2"*2);       //  4
+
+// console.log(2 * "2");  // 4
+
+// console.log(2 / "2");  // 1
+
+// console.log("2"/2);      //1
