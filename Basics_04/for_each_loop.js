@@ -6,7 +6,7 @@ arr3.forEach( (i) => console.log(i));
 
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
-// coding.forEach( function (val){
+// coding.forEach( function (val)){
 //     console.log(val);
 // } )
 
@@ -43,3 +43,10 @@ myCoding.forEach( (item) => {
     
     // console.log(item.languageName);
 } )
+
+const myObject = {
+    game1: 'NFS',
+    game2: 'Spiderman'
+}
+
+myObject.forEach( (i) => console.log(i))

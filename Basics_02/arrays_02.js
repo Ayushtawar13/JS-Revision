@@ -13,7 +13,7 @@ let arr2 = [10,30,50,60,70,80];
 
 // concat joining two arrays
 
-// let cb = arr.concat(arr2); returns a new array does not made any changes in arrays given 
+// let cb = arr.concat(arr2); //returns a new array does not made any changes in arrays given 
 // console.log(cb);
 // console.log(arr2);
 // console.log(arr);

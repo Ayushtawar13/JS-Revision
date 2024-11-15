@@ -9,7 +9,7 @@ if (true) {
 
 
 
-// console.log(a);
+console.log(a);
 // console.log(b);
 // console.log(c);
 
@@ -55,7 +55,7 @@ function addone(num){
 
 
 
-addTwo(5) //gives error
+// addTwo(5) //gives error
 const addTwo = function(num){
     return num + 2
 }

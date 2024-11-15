@@ -11,7 +11,7 @@ arr.forEach( (num) => {
     return newNums.push(num+10)
 } )
 
-// console.log(newNums)
+console.log(newNums)
 
 // chainning of properties 
 

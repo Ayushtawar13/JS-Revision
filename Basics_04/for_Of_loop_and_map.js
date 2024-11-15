@@ -6,7 +6,7 @@
 const arr = [1, 2, 3, 4, 5]
 
 for (const num of arr) {
-    //console.log(num);
+    console.log(num);
 }
 
 const greetings = "Hello world!"
@@ -23,10 +23,10 @@ map.set('Fr', "France")
 map.set('IN', "India")
 
 
-// console.log(map);
+console.log(map);
 
 for (const [key, value] of map) {
-    // console.log(key, ':-', value);
+    console.log(key, ':-', value);
 }
 
 // objects iteratable nhi hai 
@@ -36,10 +36,10 @@ const myObject = {
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
-//     console.log(key, ':-', value);
+for (const [key, value] of myObject) {
+    console.log(key, ':-', value);
     
-// }
+}
 
 
 

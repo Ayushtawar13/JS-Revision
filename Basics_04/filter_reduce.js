@@ -63,7 +63,8 @@ for(let item in history){
     // console.log("key " ,item  ," value ", history[item]);
 }
 
-
+let arrCheck = [1,2,3,4,5];
+console.log("yeahh broo " , Array.isArray(arrCheck , 1));
 // reduce 
 
 const myNums = [1, 2, 3]
@@ -100,3 +101,9 @@ const shoppingCart = [
 const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
 
 // console.log(priceToPay);
+
+let sum = arrCheck.reduce( (acc , cur) => {
+    return cur+acc; 
+} , 15)
+
+console.log(sum)

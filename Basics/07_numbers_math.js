@@ -5,17 +5,17 @@ let num = 100;
 // creating number using object 
 
 let n = new Number(400);
-// console.log(n);
+console.log(n);
 
 /*Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
 Returns a string representing a number in fixed-point notation.*/ 
 
 n.toFixed(1)
-// console.log(n.toFixed(2));
+console.log(n.toFixed(2));
 
-// console.log(n.toString()); // converts number into string
+console.log(n.toString()); // converts number into string
 
-// console.log(n.toString().length);
+console.log(n.toString().length);
 
 /*Converts a number to  a string by using the current or specified locale.*/
 const rs =2335630000;
@@ -31,7 +31,7 @@ const math = 30498.30954;
 console.log(Math.round(math));
 
 // console.log(Math);
-// console.log(Math.abs(-4));
+console.log(Math.abs(-4));
 // console.log(Math.round(4.6));
 // console.log(Math.ceil(4.2));
 // console.log(Math.floor(4.9));
